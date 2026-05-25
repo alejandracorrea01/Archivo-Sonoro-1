@@ -1,0 +1,1308 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+
+    --bg:#0f0f0f;
+
+    --surface:#171717;
+
+    --card:#1d1d1d;
+
+    --text:#f5f5f5;
+
+    --muted:#d1c7cd;
+
+    --accent:#f2c7dc;
+
+    --accent-strong:#ff8fc2;
+
+    --border:
+    rgba(255,255,255,.06);
+
+    --radius:24px;
+}
+/* =========================
+   BODY
+========================= */
+
+/*
+Dibujo de sensación sonora 6: interferencia digital.
+Sonido asociado: ruido tecnológico y mezcla de señales.
+Traducción CSS: gradiente oscuro con transiciones suaves para crear atmósfera inmersiva.
+Uso en la interfaz: fondo general del sitio.
+*/
+
+html{
+
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    background:
+
+    linear-gradient(
+        180deg,
+        #0f0f0f 0%,
+        #151515 40%,
+        #1c1117 70%,
+        #0f0f0f 100%
+    );
+
+    color:var(--text);
+
+    font-family:'Inter',sans-serif;
+
+    line-height:1.5;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.035;
+
+    background-image:url(
+    https://www.transparenttextures.com/patterns/noise.png
+    );
+
+    z-index:9999;
+}
+/* =========================
+   GLOBAL
+========================= */
+
+img,
+video,
+audio{
+
+    max-width:100%;
+}
+
+img,
+video{
+
+    display:block;
+
+    height:auto;
+}
+
+section{
+
+    padding:9rem 8%;
+}
+section p{
+
+    max-width:700px;
+}
+h1,h2,h3{
+
+    line-height:1.1;
+}
+
+p{
+
+    color:var(--muted);
+
+    font-size:1.05rem;
+
+    max-width:700px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    min-height:85vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:8rem 8%;
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+header h1{
+
+    font-size:
+    clamp(5rem,14vw,11rem);
+
+    line-height:.9;
+
+    letter-spacing:-8px;
+
+    text-transform:uppercase;
+
+    text-align:left;
+
+    width:100%;
+
+    max-width:1400px;
+
+    font-weight:800;
+
+    color:var(--accent);
+
+    margin-bottom:2rem;
+}
+
+header p{
+
+    max-width:700px;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav{
+
+    backdrop-filter:blur(18px);
+}
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    background:
+rgba(21,21,21,.65);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:
+    1px solid var(--border);
+
+    z-index:100;
+}
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:2rem;
+
+    padding:1rem;
+}
+
+nav a{
+
+    color:var(--muted);
+
+    text-decoration:none;
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:var(--accent);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+section h2{
+
+    font-size:
+    clamp(3rem,8vw,7rem);
+
+    line-height:.9;
+
+    letter-spacing:-5px;
+
+    text-transform:uppercase;
+
+    color:var(--accent);
+
+    margin-bottom:1rem;
+
+    text-align:left;
+
+    font-weight:800;
+}
+
+/* =========================
+   ARTICLES
+========================= */
+
+article{
+
+    background:
+
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,.015)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:32px;
+
+    padding:2.5rem;
+
+    transition:
+    transform .35s ease,
+    border-color .35s ease,
+    background .35s ease;
+
+    overflow:hidden;
+
+    position:relative;
+
+    backdrop-filter:blur(12px);
+
+    min-height:340px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+}
+
+article:hover{
+
+    transform:
+    translateY(-6px);
+
+    border-color:
+    rgba(242,199,220,.25);
+
+    background:
+
+    linear-gradient(
+        180deg,
+        rgba(242,199,220,.05),
+        rgba(255,255,255,.02)
+    );
+}
+
+article h3{
+
+    font-size:
+    clamp(2rem,4vw,3.5rem);
+
+    line-height:.9;
+
+    letter-spacing:-3px;
+
+    text-transform:uppercase;
+
+    color:var(--accent);
+
+    margin-bottom:1rem;
+
+    font-weight:800;
+}
+
+article p{
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+    color:var(--muted);
+
+    margin-bottom:2rem;
+
+    max-width:90%;
+}
+
+/* =========================
+   AUDIO
+========================= */
+
+audio{
+
+    width:100%;
+
+    height:45px;
+
+    margin-top:auto;
+
+    opacity:.88;
+
+    filter:
+    contrast(1.05)
+    brightness(.95);
+}
+
+/* =========================
+   VIDEOS
+========================= */
+
+video{
+
+    border-radius:12px;
+
+    margin-top:1rem;
+}
+
+/* =========================
+   FIGURE
+========================= */
+
+figure{
+
+    margin-top:2rem;
+
+    text-align:center;
+}
+
+figcaption{
+
+    margin-top:.8rem;
+
+    color:var(--muted);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:2rem;
+}
+
+th,td{
+
+    border:
+    1px solid var(--border);
+
+    padding:1rem;
+
+    text-align:left;
+}
+
+th{
+
+    background:var(--card);
+}
+
+/* =========================
+   ASIDE
+========================= */
+
+aside{
+
+    margin:4rem 8%;
+
+    padding:2rem;
+
+    background:var(--surface);
+
+    border-left:
+    4px solid var(--accent);
+
+    border-radius:var(--radius);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:2rem;
+
+    text-align:center;
+
+    border-top:
+    1px solid var(--border);
+
+    color:var(--muted);
+}
+
+/* =========================
+   PATRONES SONOROS
+========================= */
+
+/*
+PASOS / REPETICION
+*/
+/*
+Dibujo de sensación sonora 1: líneas repetitivas.
+Sonido asociado: pasos y movimiento universitario.
+Traducción CSS: repeating-linear-gradient para representar ritmo y repetición.
+Uso en la interfaz: fondo de tarjetas de la sección Universidad.
+*/
+
+#universidad article{
+
+    background-image:
+
+repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,.04) 0,
+    rgba(255,255,255,.04) 1px,
+    transparent 1px,
+    transparent 14px
+);
+
+    background-color:var(--card);
+}
+
+/*
+VOCES / PUNTOS
+*/
+
+/*
+Dibujo de sensación sonora 2: puntos dispersos.
+Sonido asociado: murmullo urbano y voces mezcladas.
+Traducción CSS: radial-gradient para representar caos y superposición sonora.
+Uso en la interfaz: fondo de tarjetas de la sección Ciudad.
+*/
+
+#ciudad article{
+
+    background-image:
+
+    radial-gradient(
+        rgba(242,199,220,.08) 1px,
+        transparent 1px
+    );
+
+    background-size:12px 12px;
+}
+
+#ciudad article:last-child h3{
+
+    font-size:
+    clamp(1.7rem,3vw,2.8rem);
+}
+
+
+/*
+ONDAS / ECO
+*/
+
+/*
+Dibujo de sensación sonora 3: ondas suaves.
+Sonido asociado: respiración y sonidos corporales.
+Traducción CSS: repeating-radial-gradient para representar expansión y eco corporal.
+Uso en la interfaz: fondo de tarjetas de la sección Cuerpo.
+*/
+
+#cuerpo article{
+
+    background-image:
+
+    repeating-radial-gradient(
+        circle at center,
+
+        rgba(255,255,255,.03) 0,
+
+        rgba(255,255,255,.03) 2px,
+
+        transparent 2px,
+
+        transparent 24px
+    );
+
+    background-color:var(--card);
+}
+
+/*
+TECNOLOGIA
+*/
+
+/*
+Dibujo de sensación sonora 4: cortes diagonales.
+Sonido asociado: ruido tecnológico e interferencia digital.
+Traducción CSS: linear-gradient para representar precisión y dirección mecánica.
+Uso en la interfaz: fondo de tarjetas de la sección Tecnología.
+*/
+
+#tecnologia article{
+
+    background-image:
+
+    linear-gradient(
+        135deg,
+        rgba(242,199,220,.08),
+        transparent 60%
+    );
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+
+        flex-wrap:wrap;
+
+        gap:1rem;
+    }
+
+    section{
+
+        padding:4rem 1.5rem;
+    }
+
+    header h1{
+
+        font-size:3rem;
+    }
+
+    table{
+
+        display:block;
+
+        overflow-x:auto;
+    }
+
+}
+/* =========================
+   GRID SONORO
+========================= */
+
+.coleccion-sonora{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:1.5rem;
+
+    margin-top:2rem;
+}
+
+/* =========================
+   COLECCION VISUAL
+========================= */
+
+.coleccion-visual{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:1.5rem;
+
+    margin-top:2rem;
+}
+
+/* =========================
+   CARD VIDEO
+========================= */
+
+.coleccion-visual figure{
+
+    background:var(--card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:520px;
+}
+
+article::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(242,199,220,.5),
+        transparent
+    );
+}
+
+
+/* HOVER */
+
+.coleccion-visual figure:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.35);
+}
+
+/* =========================
+   VIDEO
+========================= */
+
+.coleccion-visual video{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    display:block;
+
+    background:black;
+}
+
+/* =========================
+   CAPTION
+========================= */
+
+figcaption{
+
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:1.5rem;
+
+    color:var(--muted);
+
+    font-size:1.1rem;
+}
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario{
+
+    margin-top:2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:1.5rem;
+
+    max-width:700px;
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.6rem;
+}
+
+label{
+
+    font-weight:bold;
+}
+
+input,
+textarea{
+
+    background:var(--card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:1rem;
+
+    color:var(--text);
+
+    font-size:1rem;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--accent);
+
+    box-shadow:
+    0 0 0 3px
+    rgba(212,255,63,.15);
+}
+
+button{
+
+    background:var(--accent);
+
+    color:white;
+
+    border:none;
+
+    padding:1rem 1.5rem;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    width:fit-content;
+}
+
+button:hover{
+
+    transform:
+    translateY(-2px);
+
+    filter:brightness(1.05);
+}
+/* =========================
+   TABLA
+========================= */
+
+.contenedor-tabla{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    margin-top:2rem;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    min-width:700px;
+}
+
+th{
+
+    background:var(--card);
+
+    color:var(--accent);
+
+    text-align:left;
+
+    padding:1rem;
+
+    border:
+    1px solid var(--border);
+}
+
+td{
+
+    padding:1rem;
+
+    border:
+    1px solid var(--border);
+
+    color:var(--muted);
+}
+
+tr{
+
+    transition:.3s;
+}
+
+tbody tr:hover{
+
+    background:
+    rgba(255,255,255,.03);
+}
+/* =========================
+   ASIDE
+========================= */
+
+aside{
+
+    margin:5rem 8%;
+
+    padding:2.5rem;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(212,255,63,.08),
+        rgba(255,255,255,.02)
+    );
+
+    border:
+    1px solid var(--border);
+
+    border-left:
+    4px solid var(--accent);
+
+    border-radius:var(--radius);
+}
+
+aside h2{
+
+    margin-bottom:1rem;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:4rem 2rem;
+
+    border-top:
+    1px solid var(--border);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    gap:.6rem;
+}
+
+footer p{
+
+    color:var(--text);
+
+    margin:0;
+}
+
+footer small{
+
+    color:var(--muted);
+
+    font-size:.9rem;
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+/*
+Dibujo de sensación sonora 5: eco lejano.
+Sonido asociado: memoria visual y expansión emocional.
+Traducción CSS: composición superpuesta y rotaciones para representar recuerdos fragmentados.
+Uso en la interfaz: galería visual.
+*/
+
+.galeria-visual{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:0;
+
+    margin-top:3rem;
+
+    overflow:hidden;
+}
+
+/* =========================
+   FOTOS
+========================= */
+
+.foto{
+
+    width:220px;
+
+    background:
+    rgba(255,255,255,.03);
+
+    border-radius:20px;
+
+    border:
+    1px solid var(--border);
+
+    overflow:hidden;
+
+    margin-left:-30px;
+
+    box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.35);
+
+    transition:
+    transform .3s ease,
+    filter .3s ease;
+
+    backdrop-filter:blur(10px);
+}
+.foto figcaption{
+
+    padding:1rem;
+
+    font-size:.85rem;
+
+    line-height:1.5;
+
+    color:var(--muted);
+
+    text-align:left;
+}
+
+.foto img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    object-position:left;
+
+    display:block;
+}
+
+/* HOVER */
+
+.foto:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    z-index:10;
+
+    filter:brightness(1.05);
+}
+
+/* =========================
+   ROTACIONES
+========================= */
+
+.foto-1{
+
+    transform:
+    rotate(-6deg);
+}
+
+.foto-2{
+
+    transform:
+    rotate(4deg);
+}
+
+/* CENTRADAS */
+
+.foto-3 img,
+.foto-4 img,
+.foto-5 img{
+
+    object-position:center;
+}
+
+.foto-4{
+
+    transform:
+    rotate(5deg);
+
+    object-position:center;
+}
+
+.foto-5{
+
+    transform:
+    rotate(-4deg);
+}
+
+.foto-6{
+
+    transform:
+    rotate(3deg);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .galeria-visual{
+
+        gap:1rem;
+    }
+
+    .foto{
+
+        width:140px;
+
+        height:200px;
+
+        margin-left:0;
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .galeria-visual{
+
+        gap:1rem;
+    }
+
+    .foto{
+
+        width:140px;
+
+        height:200px;
+
+        margin-left:0;
+    }
+
+}
+.sensacion{
+
+    margin-top:1rem;
+
+    margin-bottom:3rem;
+
+    color:var(--accent);
+
+    font-size:.9rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+/* =========================
+   TRADUCCION VISUAL
+========================= */
+
+#traduccion table{
+
+    margin-top:3rem;
+
+    background:
+    rgba(255,255,255,.02);
+
+    border-radius:24px;
+
+    overflow:hidden;
+}
+
+#traduccion th{
+
+    color:var(--accent);
+
+    font-size:.95rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    background:
+    rgba(255,255,255,.03);
+}
+
+#traduccion td{
+
+    font-size:.95rem;
+
+    line-height:1.6;
+}
+
+#traduccion tbody tr:hover{
+
+    background:
+    rgba(242,199,220,.04);
+}
+/* =========================
+   MUESTRAS SONORAS
+========================= */
+
+.muestra-sonora{
+
+    width:120px;
+
+    height:14px;
+
+    border-radius:999px;
+
+    margin-bottom:2rem;
+
+    opacity:.9;
+}
+
+/*
+Ritmo repetitivo
+*/
+
+.patron-ritmo{
+
+    background:
+
+    repeating-linear-gradient(
+        90deg,
+        var(--accent) 0,
+        var(--accent) 2px,
+        transparent 2px,
+        transparent 10px
+    );
+}
+
+/*
+Caos urbano
+*/
+
+.patron-caos{
+
+    background:
+
+    radial-gradient(
+        var(--accent) 1px,
+        transparent 1px
+    );
+
+    background-size:10px 10px;
+}
+
+/*
+Ondas corporales
+*/
+
+.patron-ondas{
+
+    background:
+
+    repeating-radial-gradient(
+        circle at center,
+        var(--accent) 0,
+        var(--accent) 1px,
+        transparent 1px,
+        transparent 8px
+    );
+}
+
+/*
+Digital / glitch
+*/
+
+.patron-digital{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        var(--accent),
+        transparent 60%
+    );
+}
+/* =========================
+   LISTAS
+========================= */
+
+ul{
+
+    margin-top:2rem;
+
+    padding-left:1.5rem;
+
+    color:var(--muted);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:.8rem;
+}
+
+li::marker{
+
+    color:var(--accent);
+}
